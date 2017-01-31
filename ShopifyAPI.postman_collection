@@ -1,0 +1,4497 @@
+{
+	"variables": [],
+	"info": {
+		"name": "ShopifyAPI (generic)",
+		"_postman_id": "3edfacae-17fe-01b2-02e3-a442d54144aa",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Abandoned Checkout",
+			"description": "",
+			"item": [
+				{
+					"name": "Get a count of checkouts",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/checkouts/count.json",
+						"method": "GET",
+            "header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "List all abandoned checkouts",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/checkouts.json",
+						"method": "GET",
+            "header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ApplicationCharge",
+			"description": "",
+			"item": [
+				{
+					"name": "Create a new one-time application charge.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/application_charges.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"application_charge\": {\n    \"name\": \"Super Duper Expensive action\",\n    \"price\": 100.0,\n    \"return_url\": \"http:\\/\\/super-duper.shopifyapps.com\"\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve one-time application charge",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/application_charges/1.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieving all one-time charges",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/application_charges.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieving all one-time charges since a specified ID",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/application_charges.json?since_id=556467234",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Activate a one-time charge",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/application_charges/675931192/activate.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"application_charge\": {\n    \"id\": 675931192,\n    \"name\": \"iPod Cleaning\",\n    \"api_client_id\": 755357713,\n    \"price\": \"5.00\",\n    \"status\": \"accepted\",\n    \"return_url\": \"http:\\/\\/google.com\",\n    \"created_at\": \"2017-01-05T15:31:41-05:00\",\n    \"updated_at\": \"2017-01-05T15:31:41-05:00\",\n    \"test\": null,\n    \"charge_type\": null,\n    \"decorated_return_url\": \"http:\\/\\/google.com?charge_id=675931192\"\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Article",
+			"description": "",
+			"item": [
+				{
+					"name": "Get a list of all articles from a certain blog",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get all the articles after the specified ID",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles.json?since_id=128701187",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all articles from a certain blog",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single article by its ID and the ID of the parent blog",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles/196805774.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new article for a blog",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"article\": {\n    \"title\": \"Article test\",\n    \"author\": \"John Smith\",\n    \"tags\": \"This Post, Has Been Tagged\",\n    \"body_html\": \"<h1>I like articles<\\/h1>\\n<p><strong>Yea<\\/strong>, I like posting them through <span class=\\\"caps\\\">REST<\\/span>.<\\/p>\",\n    \"published_at\": \"Thu Mar 24 15:45:47 UTC 2011\"\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update an article",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles/196805774.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"article\": {\n    \"title\": \"oi\"\n  }\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get a list of all the authors of articles",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/articles/authors.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get a list of all the tags of articles",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/articles/tags.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an article of a blog tags of articles",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles/197247246.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/article#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Asset",
+			"description": "https://help.shopify.com/api/reference/asset",
+			"item": [
+				{
+					"name": "Get a list of all theme assets",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes/110163843/assets.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "https://help.shopify.com/api/reference/asset#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Change an existing liquid template's value",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes/110163843/assets.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"asset\": {\n    \"key\": \"templates\\/index.liquid\",\n    \"value\": \"<img src='backsoon-postit.png'><p>We are busy updating the store for you and will be back within the hour.<\\/p>\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/asset#update"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove assets from your shop",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes/110163843/assets.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/asset#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blog",
+			"description": "https://help.shopify.com/api/reference/blog",
+			"item": [
+				{
+					"name": "Get a list of all blogs",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/blog#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all blogs",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/blog#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single blog by its ID",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/blog#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new blog",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"blog\": {\n    \"title\": \"Test Blog via API\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/blog#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a blog",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/92408974.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"blog\": {\n    \"metafields\": [\n      {\n        \"key\": \"new\",\n        \"value\": \"newvalue\",\n        \"value_type\": \"string\",\n        \"namespace\": \"global\"\n      }\n    ]\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/blog#index"
+					},
+					"response": []
+				},
+				{
+					"name": " Delete a blog",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/92408974.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/blog#index"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CarrierService",
+			"description": "https://help.shopify.com/api/reference/carrierservice",
+			"item": [
+				{
+					"name": "Create a carrier service",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/carrier_services.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"carrier_service\": {\n    \"name\": \"Shipping Rate Provider\",\n    \"callback_url\": \"http:\\/\\/shippingrateprovider.com\",\n    \"service_discovery\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/carrierservice#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a carrier service",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/carrier_services/13841038.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"carrier_service\": {\n    \"name\": \"Shipping Rate Provider\",\n    \"callback_url\": \"http:\\/\\/shippingrateprovider.com\",\n    \"service_discovery\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/carrierservice#update"
+					},
+					"response": []
+				},
+				{
+					"name": "List carrier services",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/carrier_services.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"carrier_service\": {\n    \"name\": \"Shipping Rate Provider\",\n    \"callback_url\": \"http:\\/\\/shippingrateprovider.com\",\n    \"service_discovery\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/carrierservice#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single carrier service by its ID",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/carrier_services/13841038.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"carrier_service\": {\n    \"name\": \"Shipping Rate Provider\",\n    \"callback_url\": \"http:\\/\\/shippingrateprovider.com\",\n    \"service_discovery\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/carrierservice#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Destroy a carrier service",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/carrier_services/13841038.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"carrier_service\": {\n    \"name\": \"Shipping Rate Provider\",\n    \"callback_url\": \"http:\\/\\/shippingrateprovider.com\",\n    \"service_discovery\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/carrierservice#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Checkout",
+			"description": "https://help.shopify.com/api/reference/checkout",
+			"item": []
+		},
+		{
+			"name": "Collect",
+			"description": "https://help.shopify.com/api/reference/collect",
+			"item": [
+				{
+					"name": "Add a product to a collection",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com//admin/collects.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"collect\": {\n    \"product_id\": 921728736,\n    \"collection_id\": 841564295\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/collect#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove a product from a collection",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/collects/921728736.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/collect#delete"
+					},
+					"response": []
+				},
+				{
+					"name": "List all collects",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/collects.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"collect\": {\n    \"product_id\": 921728736,\n    \"collection_id\": 841564295\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/collect#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all collects",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/collects/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"collect\": {\n    \"product_id\": 921728736,\n    \"collection_id\": 841564295\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/collect#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Return a collect with a certain id",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/collects/20713233987.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"collect\": {\n    \"product_id\": 921728736,\n    \"collection_id\": 841564295\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/collect#index"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Country",
+			"description": "https://help.shopify.com/api/reference/country",
+			"item": [
+				{
+					"name": "Get a list of all countries",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/country#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all countries",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/country#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Show Country",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/261414723.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/country#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a country",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"country\": {\n    \"code\": \"FR\",\n    \"tax\": 0.25\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/country#index"
+					},
+					"response": []
+				},
+				{
+					"name": "update a country",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/444574734.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"country\": {\n    \"id\": 444574734,\n    \"tax\": 0.1\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/country#update"
+					},
+					"response": []
+				},
+				{
+					"name": "delete a country",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/444574734.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/country#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomCollection",
+			"description": "",
+			"item": [
+				{
+					"name": "Get a list of all custom collections ",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/custom_collections.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customcollection#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all custom collections ",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/custom_collections/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customcollection#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single custom collections ",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/custom_collections/246409795.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customcollection#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new custom collection",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/custom_collections.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"custom_collection\": {\n    \"title\": \"Macbooks\",\n    \"image\": {\n      \"src\": \"http:\\/\\/example.com\\/rails_logo.gif\"\n    }\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/customcollection#create"
+					},
+					"response": []
+				},
+				{
+					"name": "update a custom collection",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/custom_collections/246409795.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"custom_collection\": {\n    \"id\": 841564295,\n    \"body_html\": \"<p>5000 songs in your pocket<\\/p>\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/customcollection#index"
+					},
+					"response": []
+				},
+				{
+					"name": "delete a custom collection",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/custom_collections/246409795.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customcollection#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"description": "https://help.shopify.com/api/reference/customer#index",
+			"item": [
+				{
+					"name": "Retrieve all customers",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customer#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all customers with an address in the Brazil",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/search.json?query=country:Brazil",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customer#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single customer by ID",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customer#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new customer record",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"customer\": {\n    \"first_name\": \"Steve\",\n    \"last_name\": \"Lastnameson\",\n    \"email\": \"steve.lastnameson@example.com\",\n    \"phone\": \"+15142546011\",\n    \"verified_email\": true,\n    \"addresses\": [\n      {\n        \"address1\": \"123 Oak St\",\n        \"city\": \"Ottawa\",\n        \"province\": \"ON\",\n        \"phone\": \"555-1212\",\n        \"zip\": \"123 ABC\",\n        \"last_name\": \"Lastnameson\",\n        \"first_name\": \"Mother\",\n        \"country\": \"CA\"\n      }\n    ]\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/customer#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Add metafield to an existing customer",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/5438892686.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"customer\": {\n    \"id\": 207119551,\n    \"metafields\": [\n      {\n        \"key\": \"new\",\n        \"value\": \"newvalue\",\n        \"value_type\": \"string\",\n        \"namespace\": \"global\"\n      }\n    ]\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/customer#update"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove an existing customer",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/5438892686.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customer#destroy"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all customers",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customer#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all orders from a customer",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders.json?customer_id=5380614542",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customer#index"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomerAddress",
+			"description": "https://help.shopify.com/api/reference/customeraddress",
+			"item": [
+				{
+					"name": "Get all of a customer's addresses",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single customers address",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses/5436816654.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Creating a new address for a customer",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"address\": {\n    \"address1\": \"1 Rue des Carrieres\",\n    \"address2\": \"Suite 1234\",\n    \"city\": \"Montreal\",\n    \"company\": \"Fancy Co.\",\n    \"first_name\": \"Samuel\",\n    \"last_name\": \"de Champlain\",\n    \"phone\": \"819-555-5555\",\n    \"province\": \"Quebec\",\n    \"country\": \"Canada\",\n    \"zip\": \"G1R 4P5\",\n    \"name\": \"Samuel de Champlain\",\n    \"province_code\": \"QC\",\n    \"country_code\": \"CA\",\n    \"country_name\": \"Canada\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Updating a customers postal code",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses/5484465742.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"address\": {\n    \"id\": 207119551,\n    \"zip\": \"90210\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#update"
+					},
+					"response": []
+				},
+				{
+					"name": "Removing a customers address",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses/5484465742.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#destroy"
+					},
+					"response": []
+				},
+				{
+					"name": "destroying multiple customer addresses",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses/set.json?address_ids[]=5441388622&operation=destroy",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#update"
+					},
+					"response": []
+				},
+				{
+					"name": "assigning a new default address to a customer",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses/5436816654/default.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#update"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomerSavedSearch",
+			"description": "https://help.shopify.com/api/reference/customersavedsearch",
+			"item": [
+				{
+					"name": " Get all customer saved searches for a shop",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all customer saved searches",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get one customer saved search by ID",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches/1189248515.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all customers who match the criteria",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches/1189248515/customers.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new Customer Saved Search",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"customer_saved_search\": {\n    \"name\": \"Spent more than $50\",\n    \"query\": \"total_spent:>50\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update an existing Customer Saved Search",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches/2029905294.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"customer_saved_search\": {\n    \"id\": 2029905294,\n    \"name\": \"This Name Has Been Changed\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#update"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an existing Customer Saved Search",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches/2029905294.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/customeraddress#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Discount",
+			"description": "https://help.shopify.com/api/reference/discount",
+			"item": [
+				{
+					"name": " Create a discount",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/discounts.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/discount#create"
+					},
+					"response": []
+				},
+				{
+					"name": "List all discounts",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/discounts.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/discount#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve a discount",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/discounts/2951196163.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/discount#index"
+					},
+					"response": []
+				},
+				{
+					"name": " Disable a discount",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/discounts/2951196163/disable.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/discount#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Enable a discount",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/discounts/2951196163/enable.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/discount#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a discount",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/discounts/2951196163.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/discount#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event",
+			"description": "https://help.shopify.com/api/reference/event",
+			"item": [
+				{
+					"name": "Get all the events from a particular product",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/events.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/event#articles"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all the events from a particular order",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/events.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/event#articles"
+					},
+					"response": []
+				},
+				{
+					"name": "Shows the same fields as the list action.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/events/58706658318.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/event#articles"
+					},
+					"response": []
+				},
+				{
+					"name": "Count all the events",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/events/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/event#articles"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fullfilment",
+			"description": "https://help.shopify.com/api/reference/fulfillment",
+			"item": [
+				{
+					"name": "Count all the total number of fulfillments for an order.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillment#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a list of all fulfillments for an order.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4495703502/fulfillments.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillment#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get the Representation of a specific fulfillment.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillment#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Update tracking number for a fulfillment.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fulfillment\": {\n    \"tracking_number\": \"987654321\",\n    \"id\": 3770145678\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillment#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Complete a fulfillment.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/complete.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillment#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Transition a fulfillment from pending to open.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/open.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillment#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel a fulfillment.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/cancel.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillment#index"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FullfilmentEvent",
+			"description": "https://help.shopify.com/api/reference/fulfillmentevent",
+			"item": [
+				{
+					"name": "Get a list of all fulfillment events for a fulfillment",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/events.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillmentevent#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch a fulfillment event.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/events/#{event_id}.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillmentevent#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a fulfillment event.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4495703502/fulfillments/3763917198/events.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"event\": {\n    \"status\": \"delivered\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillmentevent#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a fulfillment event.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4495703502/fulfillments/3763917198/events/9519874062.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"event\": {\n    \"status\": \"delivered\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillmentevent#index"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FullfilmentService",
+			"description": "https://help.shopify.com/api/reference/fulfillmentservice",
+			"item": [
+				{
+					"name": "List your app's fulfillment services",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/fulfillment_services.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"event\": {\n    \"status\": \"delivered\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillmentservice"
+					},
+					"response": []
+				},
+				{
+					"name": " Create a fulfillment service",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/fulfillment_services.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fulfillment_service\": {\n    \"name\": \"MarsFulfillment\",\n    \"callback_url\": \"http:\\/\\/google.com\",\n    \"inventory_management\": true,\n    \"tracking_support\": true,\n    \"requires_shipping_method\": true,\n    \"format\": \"json\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillmentservice"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single fulfillment service by its ID",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/fulfillment_services/1357646.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"event\": {\n    \"status\": \"delivered\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillmentservice"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a fulfillment service",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/fulfillment_services/1357646.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fulfillment_service\": {\n    \"id\": 755357713,\n    \"inventory_management\": false\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillmentservice"
+					},
+					"response": []
+				},
+				{
+					"name": " Destroy a fulfillment service",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/fulfillment_services/1357646.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fulfillment_service\": {\n    \"id\": 755357713,\n    \"inventory_management\": false\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/fulfillmentservice"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GiftCards",
+			"description": "https://help.shopify.com/api/reference/gift_card",
+			"item": [
+				{
+					"name": "Get a list of all gift cards",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fulfillment_service\": {\n    \"id\": 755357713,\n    \"inventory_management\": false\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/gift_card"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a list of all enabled gift cards",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards.json?status=enabled",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fulfillment_service\": {\n    \"id\": 755357713,\n    \"inventory_management\": false\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/gift_card"
+					},
+					"response": []
+				},
+				{
+					"name": "Show a specific gift card's details",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards/61466894.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fulfillment_service\": {\n    \"id\": 755357713,\n    \"inventory_management\": false\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/gift_card"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve a count of all gift cards",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"fulfillment_service\": {\n    \"id\": 755357713,\n    \"inventory_management\": false\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/gift_card"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new gift card with an automatically generated code",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"gift_card\": {\n    \"initial_value\": 25.0\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/gift_card"
+					},
+					"response": []
+				},
+				{
+					"name": "Update the expiry date of a gift card",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards/61810574.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"gift_card\": {\n    \"expires_on\": \"2020-01-01\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/gift_card"
+					},
+					"response": []
+				},
+				{
+					"name": "Disable a gift card",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards/61810574/disable.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"gift_card\": {\n    \"id\": 61810574\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/gift_card"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all gift cards that matches the query",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards/search.json?query=61",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/gift_card"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Location",
+			"description": "https://help.shopify.com/api/reference/location",
+			"item": [
+				{
+					"name": "Get a list of all locations for a shop",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/locations.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/location"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single location",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/locations/8790723.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/location"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Metafield",
+			"description": "https://help.shopify.com/api/reference/metafield",
+			"item": [
+				{
+					"name": "Get all metafields that belong to a store",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/metafields.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/metafield#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all metafields that belong to a product",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/metafields.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/metafield#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all metafields for a store",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/metafields/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/metafield#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all metafields that belong to a product",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/metafields/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/metafield#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single store metafield by ID",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/metafields/33145232974.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/metafield#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single product metafield using the metafield's nested resource path",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/metafields/33058305934.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/metafield#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new metafield for a store.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/metafields.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"metafield\": {\n    \"namespace\": \"inventory\",\n    \"key\": \"warehouse\",\n    \"value\": 25,\n    \"value_type\": \"integer\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/metafield#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new metafield for a product.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/metafields.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"metafield\": {\n    \"namespace\": \"inventory\",\n    \"key\": \"warehouse\",\n    \"value\": 25,\n    \"value_type\": \"integer\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/metafield#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Update an existing store metafield. ",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/metafields/33145232974.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"metafield\": {\n    \"id\": 721389482,\n    \"value\": \"something new\",\n    \"value_type\": \"string\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/metafield#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Update an existing metafield belonging to a product ",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/metafields/33058305934.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"metafield\": {\n    \"id\": 845366454,\n    \"value\": \"titre\",\n    \"value_type\": \"string\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/metafield#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a store metafield",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/metafields/33145232974.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/metafield#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a product metafield",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/metafields/33058305934.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/metafield#index"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"description": "https://help.shopify.com/api/reference/order",
+			"item": [
+				{
+					"name": "List all orders",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/order#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a representation of a single order",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/order#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Count all orders",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/order#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Close a processed order",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/close.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"description": "https://help.shopify.com/api/reference/order#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Re-opening a closed Order",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/open.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"description": "https://help.shopify.com/api/reference/order#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Canceling an Order",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/cancel.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"description": "https://help.shopify.com/api/reference/order#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Canceling and refunding an Order",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/cancel.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"note\": \"Broke in shipping\",\n  \"amount\": \"10.00\"\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/order#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a pending order with an existing customer",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"order\": {\n    \"line_items\": [\n      {\n        \"variant_id\": 33214924878,\n        \"quantity\": 1\n      }\n    ],\n    \"customer\": {\n      \"id\": 3989659651\n    },\n    \"financial_status\": \"pending\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/order#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update an order",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"order\": {\n    \"customer\": null\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/order#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an order.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"order\": {\n    \"customer\": null\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/order#index"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderRisks",
+			"description": "https://help.shopify.com/api/reference/order_risks",
+			"item": [
+				{
+					"name": "Add a fraud risk for Proxy detection",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4602125518/risks.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"risk\": {\n    \"message\": \"This order came from an anonymous proxy\",\n    \"recommendation\": \"cancel\",\n    \"score\": 1.0,\n    \"source\": \"External\",\n    \"cause_cancel\": true,\n    \"display\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/order_risks"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Order Risks for an Order",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4602125518/risks.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"risk\": {\n    \"message\": \"This order came from an anonymous proxy\",\n    \"recommendation\": \"cancel\",\n    \"score\": 1.0,\n    \"source\": \"External\",\n    \"cause_cancel\": true,\n    \"display\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/order_risks"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single Order Risk",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4602125518/risks/8609858574.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"risk\": {\n    \"message\": \"This order came from an anonymous proxy\",\n    \"recommendation\": \"cancel\",\n    \"score\": 1.0,\n    \"source\": \"External\",\n    \"cause_cancel\": true,\n    \"display\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/order_risks"
+					},
+					"response": []
+				},
+				{
+					"name": "Update an existing risk detail line on an order",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4602125518/risks/8609858574.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"risk\": {\n    \"id\": 284138680,\n    \"message\": \"After further review, this is a legitimate order\",\n    \"recommendation\": \"accept\",\n    \"source\": \"External\",\n    \"cause_cancel\": false,\n    \"score\": 0.0\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/order_risks"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an erroneous risk entry",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4602125518/risks/8609858574.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"risk\": {\n    \"id\": 284138680,\n    \"message\": \"After further review, this is a legitimate order\",\n    \"recommendation\": \"accept\",\n    \"source\": \"External\",\n    \"cause_cancel\": false,\n    \"score\": 0.0\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/order_risks"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Page",
+			"description": "https://help.shopify.com/api/reference/page",
+			"item": [
+				{
+					"name": "Get a list of all pages",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/pages.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"risk\": {\n    \"id\": 284138680,\n    \"message\": \"After further review, this is a legitimate order\",\n    \"recommendation\": \"accept\",\n    \"source\": \"External\",\n    \"cause_cancel\": false,\n    \"score\": 0.0\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/page"
+					},
+					"response": []
+				},
+				{
+					"name": "Count all pages for a shop",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/pages/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"risk\": {\n    \"id\": 284138680,\n    \"message\": \"After further review, this is a legitimate order\",\n    \"recommendation\": \"accept\",\n    \"source\": \"External\",\n    \"cause_cancel\": false,\n    \"score\": 0.0\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/page"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single page by its ID",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/pages/169722563.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"risk\": {\n    \"id\": 284138680,\n    \"message\": \"After further review, this is a legitimate order\",\n    \"recommendation\": \"accept\",\n    \"source\": \"External\",\n    \"cause_cancel\": false,\n    \"score\": 0.0\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/page"
+					},
+					"response": []
+				},
+				{
+					"name": " Create a new page",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/pages.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"title\": \"Warranty information\",\n    \"body_html\": \"<h1>Warranty<\\/h1>\\n<p><strong>Forget it<\\/strong>, we aint giving you nothing<\\/p>\",\n    \"published\": false\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/page#create"
+					},
+					"response": []
+				},
+				{
+					"name": "update a page",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/pages/216307854.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"id\": 131092082,\n    \"published\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/page#update"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a page",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/pages/216307854.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"id\": 131092082,\n    \"published\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/page#update"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Policy",
+			"description": "https://help.shopify.com/api/reference/policy",
+			"item": [
+				{
+					"name": "getting the shops policies",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/policies.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"id\": 131092082,\n    \"published\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/policy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"description": "https://help.shopify.com/api/reference/product#index",
+			"item": [
+				{
+					"name": " Get all products",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"id\": 131092082,\n    \"published\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Count all products",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"id\": 131092082,\n    \"published\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single product",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"id\": 131092082,\n    \"published\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new product with multiple product variants",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"product\": {\n    \"title\": \"Burton Custom Freestyle 151\",\n    \"body_html\": \"<strong>Good snowboard!<\\/strong>\",\n    \"vendor\": \"Burton\",\n    \"product_type\": \"Snowboard\",\n    \"variants\": [\n      {\n        \"option1\": \"First\",\n        \"price\": \"10.00\",\n        \"sku\": 123\n      },\n      {\n        \"option1\": \"Second\",\n        \"price\": \"20.00\",\n        \"sku\": \"123\"\n      }\n    ]\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a product and one of its variants",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/9579007950.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"product\": {\n    \"id\": 9579007950,\n    \"title\": \"Updated Product Title\",\n    \"variants\": [\n      {\n        \"id\": 25831837123,\n        \"price\": \"2000.00\",\n        \"sku\": \"Updating the Product SKU\"\n      }\n    ]\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove a product from the shop",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/9579007950.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"product\": {\n    \"id\": 9579007950,\n    \"title\": \"Updated Product Title\",\n    \"variants\": [\n      {\n        \"id\": 25831837123,\n        \"price\": \"2000.00\",\n        \"sku\": \"Updating the Product SKU\"\n      }\n    ]\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product#index"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductImage",
+			"description": "https://help.shopify.com/api/reference/product_image",
+			"item": [
+				{
+					"name": "Get all product images",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/images.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"id\": 131092082,\n    \"published\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product_image#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all product images",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/images/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"id\": 131092082,\n    \"published\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product_image#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single product image by id",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/images/19489404942.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"id\": 131092082,\n    \"published\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product_image#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new product image",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/images.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"image\": {\n    \"src\": \"http:\\/\\/example.com\\/rails_logo.gif\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product_image#index"
+					},
+					"response": []
+				},
+				{
+					"name": " Modify an existing product image",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/images/19489404942.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"image\": {\n    \"id\": 850703190,\n    \"position\": 2,\n    \"metafields\": [\n      {\n        \"key\": \"alt\",\n        \"value\": \"new alt tag content\",\n        \"value_type\": \"string\",\n        \"namespace\": \"tags\"\n      }\n    ]\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product_image#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a product image",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/images/19489404942.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"image\": {\n    \"id\": 850703190,\n    \"position\": 2,\n    \"metafields\": [\n      {\n        \"key\": \"alt\",\n        \"value\": \"new alt tag content\",\n        \"value_type\": \"string\",\n        \"namespace\": \"tags\"\n      }\n    ]\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product_image#index"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductVariant",
+			"description": "https://help.shopify.com/api/reference/product_variant#index",
+			"item": [
+				{
+					"name": "Get all variants for a product",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/variants.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"id\": 131092082,\n    \"published\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product_variant#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of variants for a product",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/variants/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"id\": 131092082,\n    \"published\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product_variant#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a product variant by id",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin//variants/25831837123.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"id\": 131092082,\n    \"published\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product_variant#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new product variant",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/variants.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"variant\": {\n    \"option1\": \"Yellow\",\n    \"price\": \"1.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product_variant#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update an existing product variant",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/variants/34705478094.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"variant\": {\n    \"id\": 808950810,\n    \"option1\": \"Not Pink\",\n    \"price\": \"99.00\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product_variant#update"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a product variant",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/variants/34705478094.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"page\": {\n    \"id\": 131092082,\n    \"published\": true\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/product_variant#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Province",
+			"description": "https://help.shopify.com/api/reference/province",
+			"item": [
+				{
+					"name": "Get a count of all provinces",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/261414723/provinces/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/province#index\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Get all provinces",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/261414723/provinces.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/province#index"
+					},
+					"response": []
+				},
+				{
+					"name": "get a single province",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/261414723/provinces/4003640003.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/province#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a province's tax rate",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/261414723/provinces/4003640003.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"province\": {\n    \"id\": 224293623,\n    \"tax\": 0.15\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/province#index"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RecurringApplicationCharge",
+			"description": "https://help.shopify.com/api/reference/recurringapplicationcharge",
+			"item": [
+				{
+					"name": "Create a new charge",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/recurring_application_charges.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"recurring_application_charge\": {\n    \"name\": \"Super Duper Plan\",\n    \"price\": 10.0,\n    \"return_url\": \"http:\\/\\/super-duper.shopifyapps.com\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/recurringapplicationcharge#create"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Redirect",
+			"description": "",
+			"item": [
+				{
+					"name": "Get a list of all URL redirect",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/redirects.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/redirect#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a countt of all URL redirect",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/redirects/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/redirect#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single URL redirect",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/redirects/count/7376372.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/redirect#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new redirect.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/redirects.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"redirect\": {\n    \"path\": \"\\/ipod\",\n    \"target\": \"\\/pages\\/itunes\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/redirect#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a redirect",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/redirects/293743566.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"redirect\": {\n    \"id\": 668809255,\n    \"path\": \"\\/tiger\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/redirect#update"
+					},
+					"response": []
+				},
+				{
+					"name": "delete a redirect",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/redirects/293743566.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/redirect#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Refund",
+			"description": "https://help.shopify.com/api/reference/refund#index",
+			"item": [
+				{
+					"name": "Get all refunds from a specific order",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/refunds.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/refund#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a representation of a single refund",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/refunds/646546.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/refund#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Calculate a refund for a line item and shipping",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/refunds/calculate.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refund\": {\n    \"shipping\": {\n      \"full_refund\": true\n    },\n    \"refund_line_items\": [\n      {\n        \"line_item_id\": 25831837123,\n        \"quantity\": 1\n      }\n    ]\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/refund#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new refund for an order",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/refunds.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refund\": {\n    \"restock\": true,\n    \"notify\": true,\n    \"note\": \"wrong size\",\n    \"shipping\": {\n      \"full_refund\": true\n    },\n    \"refund_line_items\": [\n      {\n        \"line_item_id\": 518995019,\n        \"quantity\": 1\n      }\n    ],\n    \"transactions\": [\n      {\n        \"parent_id\": 801038806,\n        \"amount\": 199.65,\n        \"kind\": \"refund\",\n        \"gateway\": \"bogus\"\n      }\n    ]\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/refund#index"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ScriptTag",
+			"description": "https://help.shopify.com/api/reference/scripttag",
+			"item": [
+				{
+					"name": "Get a list of all script tags ",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/script_tags.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refund\": {\n    \"restock\": true,\n    \"notify\": true,\n    \"note\": \"wrong size\",\n    \"shipping\": {\n      \"full_refund\": true\n    },\n    \"refund_line_items\": [\n      {\n        \"line_item_id\": 518995019,\n        \"quantity\": 1\n      }\n    ],\n    \"transactions\": [\n      {\n        \"parent_id\": 801038806,\n        \"amount\": 199.65,\n        \"kind\": \"refund\",\n        \"gateway\": \"bogus\"\n      }\n    ]\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/scripttag#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all script tags ",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/script_tags/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refund\": {\n    \"restock\": true,\n    \"notify\": true,\n    \"note\": \"wrong size\",\n    \"shipping\": {\n      \"full_refund\": true\n    },\n    \"refund_line_items\": [\n      {\n        \"line_item_id\": 518995019,\n        \"quantity\": 1\n      }\n    ],\n    \"transactions\": [\n      {\n        \"parent_id\": 801038806,\n        \"amount\": 199.65,\n        \"kind\": \"refund\",\n        \"gateway\": \"bogus\"\n      }\n    ]\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/scripttag#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single  script tag",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/script_tags/373484.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"refund\": {\n    \"restock\": true,\n    \"notify\": true,\n    \"note\": \"wrong size\",\n    \"shipping\": {\n      \"full_refund\": true\n    },\n    \"refund_line_items\": [\n      {\n        \"line_item_id\": 518995019,\n        \"quantity\": 1\n      }\n    ],\n    \"transactions\": [\n      {\n        \"parent_id\": 801038806,\n        \"amount\": 199.65,\n        \"kind\": \"refund\",\n        \"gateway\": \"bogus\"\n      }\n    ]\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/scripttag#index"
+					},
+					"response": []
+				},
+				{
+					"name": "create a new script tag",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/script_tags.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"script_tag\": {\n    \"event\": \"onload\",\n    \"src\": \"https:\\/\\/djavaskripped.org\\/fancy.js\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/scripttag#create"
+					},
+					"response": []
+				},
+				{
+					"name": "update a script tag",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/script_tags/108074126.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"script_tag\": {\n    \"id\": 596726825,\n    \"src\": \"https:\\/\\/somewhere-else.com\\/another.js\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/scripttag#update"
+					},
+					"response": []
+				},
+				{
+					"name": "remove a script tag",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/script_tags/108074126.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/scripttag#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ShippingZone",
+			"description": "https://help.shopify.com/api/reference/shipping_zone",
+			"item": [
+				{
+					"name": "Show list of shipping zones",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/shipping_zones.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/shipping_zone#index"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shop",
+			"description": "https://help.shopify.com/api/reference/shop",
+			"item": [
+				{
+					"name": "Get the configuration of the shop account",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/shop.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/shop"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SmartCollection",
+			"description": "https://help.shopify.com/api/reference/smartcollection",
+			"item": [
+				{
+					"name": "Get all collection",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/smart_collections.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/smartcollection#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all collections",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/smart_collections/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/smartcollection#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single collection",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/smart_collections/401912846.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/smartcollection#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new collection",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/smart_collections.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"smart_collection\": {\n    \"title\": \"Macbooks\",\n    \"published\": false\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/smartcollection#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a single collection",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/smart_collections/401912846.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"smart_collection\": {\n    \"id\": 482865238,\n    \"body_html\": \"<p>5000 songs in your pocket<\\/p>\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/smartcollection#update"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a single collection",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/smart_collections/408154574.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/smartcollection#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Theme",
+			"description": "https://help.shopify.com/api/reference/theme",
+			"item": [
+				{
+					"name": "Get all shop themes",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/theme#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single theme",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes/110163843.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/theme#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new theme",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"theme\": {\n    \"name\": \"Lemongrass\",\n    \"src\": \"http:\\/\\/themes.shopify.com\\/theme.zip\",\n    \"role\": \"main\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/theme#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a theme's attributes",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes/164593742.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"theme\": {\n    \"id\": 752253240,\n    \"role\": \"main\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/theme#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a theme",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes/164593742.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/theme#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"description": "https://help.shopify.com/api/reference/transaction",
+			"item": [
+				{
+					"name": "Get all transactions for an order",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/transactions.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/transaction#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of transactions for an order",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/transactions/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/transaction#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a specific transaction",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/transactions/5016037966.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/transaction#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Capture a previously authorized order for the full amount",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/transactions.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"transaction\": {\n    \"kind\": \"capture\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/transaction#create"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UsageCharge",
+			"description": "https://help.shopify.com/api/reference/usagecharge",
+			"item": []
+		},
+		{
+			"name": "User",
+			"description": "https://help.shopify.com/api/reference/user",
+			"item": []
+		},
+		{
+			"name": "Webhook",
+			"description": "https://help.shopify.com/api/reference/webhook",
+			"item": [
+				{
+					"name": "Get a list of all webhooks for your shop.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/webhooks.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"transaction\": {\n    \"kind\": \"capture\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/webhook#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all webhooks for your shop.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/webhooks/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"transaction\": {\n    \"kind\": \"capture\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/webhook#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single webhook by its id.",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/webhooks/93838927.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"transaction\": {\n    \"kind\": \"capture\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/webhook#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a webhook",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/webhooks.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"webhook\": {\n    \"topic\": \"orders\\/create\",\n    \"address\": \"http:\\/\\/whatever.hostname.com\\/\",\n    \"format\": \"json\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/webhook#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Webhook",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/webhooks/503738446.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"webhook\": {\n    \"id\": 4759306,\n    \"address\": \"http:\\/\\/somewhere-else.com\\/\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/webhook#update"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Webhook",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/webhooks/503738446.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/webhook#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"description": "",
+			"item": [
+				{
+					"name": "Get a list of all comments ",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"collect\": {\n    \"product_id\": 921728736,\n    \"collection_id\": 841564295\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/comment#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all comments ",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"collect\": {\n    \"product_id\": 921728736,\n    \"collection_id\": 841564295\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/comment#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a count of all the comments for all the articles of a certain blog",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/count.json?blog_id=62581763",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"collect\": {\n    \"product_id\": 921728736,\n    \"collection_id\": 841564295\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/comment#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single comment",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/#{id}.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"collect\": {\n    \"product_id\": 921728736,\n    \"collection_id\": 841564295\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/comment#index"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new comment for an article",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com//admin/comments.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"comment\": {\n    \"body\": \"I like comments\\nAnd I like posting them *RESTfully*.\",\n    \"author\": \"Your name\",\n    \"email\": \"renato@basico.com\",\n    \"ip\": \"107.20.160.121\",\n    \"blog_id\": 62581763,\n    \"article_id\": 128701187\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/comment#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a comment ",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/2941387470.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n  \"comment\": {\n    \"id\": 2941387470,\n    \"body\": \"You can even update through a web service.\",\n    \"author\": \"Your new name\",\n    \"email\": \"your@updated-email.com\",\n    \"published_at\": \"2017-01-05T20:37:21.046Z\"\n  }\n}"
+						},
+						"description": "https://help.shopify.com/api/reference/comment#update"
+					},
+					"response": []
+				},
+				{
+					"name": "Mark a comment as Spam",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/2941387470/spam.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/comment#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Mark a comment as not spam",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/2941387470/not_spam.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/comment#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Approve a comment",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/2941387470/approve.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/comment#create"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove a comment",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/2941387470/remove.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/comment#create"
+					},
+					"response": []
+				},
+				{
+					"name": "restore a comment",
+					"request": {
+						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/2941387470/restore.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "https://help.shopify.com/api/reference/comment#create"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hack Authentication",
+			"request": {
+				"url": "https://apikey:password@yourstore.myshopify.com/account/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "customer[email]",
+							"value": "fulano@basico.com",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "customer[password]",
+							"value": "101010",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": "There is no documentation for that, its a Hack."
+			},
+			"response": []
+		}
+	]
+}
