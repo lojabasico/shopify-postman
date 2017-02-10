@@ -14,16 +14,19 @@
 				{
 					"name": "Get a count of checkouts",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/checkouts/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/checkouts/count.json",
 						"method": "GET",
-            "header": [
+						"header": [
 							{
 								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -31,16 +34,19 @@
 				{
 					"name": "List all abandoned checkouts",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/checkouts.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/checkouts.json",
 						"method": "GET",
-            "header": [
+						"header": [
 							{
 								"key": "Content-Type",
 								"value": "application/json",
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -54,7 +60,7 @@
 				{
 					"name": "Create a new one-time application charge.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/application_charges.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/application_charges.json",
 						"method": "POST",
 						"header": [
 							{
@@ -74,7 +80,7 @@
 				{
 					"name": "Retrieve one-time application charge",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/application_charges/1.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/application_charges/1.json",
 						"method": "GET",
 						"header": [
 							{
@@ -83,7 +89,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -91,7 +100,7 @@
 				{
 					"name": "Retrieving all one-time charges",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/application_charges.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/application_charges.json",
 						"method": "GET",
 						"header": [
 							{
@@ -100,7 +109,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -108,7 +120,7 @@
 				{
 					"name": "Retrieving all one-time charges since a specified ID",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/application_charges.json?since_id=556467234",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/application_charges.json?since_id=556467234",
 						"method": "GET",
 						"header": [
 							{
@@ -117,7 +129,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -125,7 +140,7 @@
 				{
 					"name": "Activate a one-time charge",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/application_charges/675931192/activate.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/application_charges/675931192/activate.json",
 						"method": "POST",
 						"header": [
 							{
@@ -151,7 +166,7 @@
 				{
 					"name": "Get a list of all articles from a certain blog",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/62581763/articles.json",
 						"method": "GET",
 						"header": [
 							{
@@ -160,7 +175,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -168,7 +186,7 @@
 				{
 					"name": "Get all the articles after the specified ID",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles.json?since_id=128701187",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/62581763/articles.json?since_id=128701187",
 						"method": "GET",
 						"header": [
 							{
@@ -177,7 +195,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -185,7 +206,7 @@
 				{
 					"name": "Get a count of all articles from a certain blog",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/62581763/articles/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -194,7 +215,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -202,7 +226,7 @@
 				{
 					"name": "Get a single article by its ID and the ID of the parent blog",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles/196805774.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/62581763/articles/196805774.json",
 						"method": "GET",
 						"header": [
 							{
@@ -211,7 +235,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -219,7 +246,7 @@
 				{
 					"name": "Create a new article for a blog",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/62581763/articles.json",
 						"method": "POST",
 						"header": [
 							{
@@ -239,7 +266,7 @@
 				{
 					"name": "Update an article",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles/196805774.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/62581763/articles/196805774.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -259,7 +286,7 @@
 				{
 					"name": "Get a list of all the authors of articles",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/articles/authors.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/articles/authors.json",
 						"method": "GET",
 						"header": [
 							{
@@ -268,7 +295,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -276,7 +306,7 @@
 				{
 					"name": "Get a list of all the tags of articles",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/articles/tags.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/articles/tags.json",
 						"method": "GET",
 						"header": [
 							{
@@ -285,7 +315,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": ""
 					},
 					"response": []
@@ -293,7 +326,7 @@
 				{
 					"name": "Delete an article of a blog tags of articles",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763/articles/197247246.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/62581763/articles/197247246.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -319,7 +352,7 @@
 				{
 					"name": "Get a list of all theme assets",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes/110163843/assets.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/themes/110163843/assets.json",
 						"method": "GET",
 						"header": [
 							{
@@ -328,7 +361,10 @@
 								"description": ""
 							}
 						],
-						"body": {},
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"description": "https://help.shopify.com/api/reference/asset#index"
 					},
 					"response": []
@@ -336,7 +372,7 @@
 				{
 					"name": "Change an existing liquid template's value",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes/110163843/assets.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/themes/110163843/assets.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -356,7 +392,7 @@
 				{
 					"name": "Remove assets from your shop",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes/110163843/assets.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/themes/110163843/assets.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -382,7 +418,7 @@
 				{
 					"name": "Get a list of all blogs",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs.json",
 						"method": "GET",
 						"header": [
 							{
@@ -402,7 +438,7 @@
 				{
 					"name": "Get a count of all blogs",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -422,7 +458,7 @@
 				{
 					"name": "Get a single blog by its ID",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/62581763.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/62581763.json",
 						"method": "GET",
 						"header": [
 							{
@@ -442,7 +478,7 @@
 				{
 					"name": "Create a new blog",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs.json",
 						"method": "POST",
 						"header": [
 							{
@@ -462,7 +498,7 @@
 				{
 					"name": "Update a blog",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/92408974.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/92408974.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -482,7 +518,7 @@
 				{
 					"name": " Delete a blog",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/blogs/92408974.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/blogs/92408974.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -508,7 +544,7 @@
 				{
 					"name": "Create a carrier service",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/carrier_services.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/carrier_services.json",
 						"method": "POST",
 						"header": [
 							{
@@ -528,7 +564,7 @@
 				{
 					"name": "Update a carrier service",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/carrier_services/13841038.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/carrier_services/13841038.json",
 						"method": "GET",
 						"header": [
 							{
@@ -548,7 +584,7 @@
 				{
 					"name": "List carrier services",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/carrier_services.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/carrier_services.json",
 						"method": "GET",
 						"header": [
 							{
@@ -568,7 +604,7 @@
 				{
 					"name": "Get a single carrier service by its ID",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/carrier_services/13841038.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/carrier_services/13841038.json",
 						"method": "GET",
 						"header": [
 							{
@@ -588,7 +624,7 @@
 				{
 					"name": "Destroy a carrier service",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/carrier_services/13841038.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/carrier_services/13841038.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -619,7 +655,7 @@
 				{
 					"name": "Add a product to a collection",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com//admin/collects.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com//admin/collects.json",
 						"method": "POST",
 						"header": [
 							{
@@ -639,7 +675,7 @@
 				{
 					"name": "Remove a product from a collection",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/collects/921728736.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/collects/921728736.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -659,7 +695,7 @@
 				{
 					"name": "List all collects",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/collects.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/collects.json",
 						"method": "GET",
 						"header": [
 							{
@@ -679,7 +715,7 @@
 				{
 					"name": "Get a count of all collects",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/collects/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/collects/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -699,7 +735,7 @@
 				{
 					"name": "Return a collect with a certain id",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/collects/20713233987.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/collects/20713233987.json",
 						"method": "GET",
 						"header": [
 							{
@@ -725,7 +761,7 @@
 				{
 					"name": "Get a list of all countries",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/countries.json",
 						"method": "GET",
 						"header": [
 							{
@@ -745,7 +781,7 @@
 				{
 					"name": "Get a count of all countries",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/countries/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -765,7 +801,7 @@
 				{
 					"name": "Show Country",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/261414723.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/countries/261414723.json",
 						"method": "GET",
 						"header": [
 							{
@@ -785,7 +821,7 @@
 				{
 					"name": "Create a country",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/countries.json",
 						"method": "POST",
 						"header": [
 							{
@@ -805,7 +841,7 @@
 				{
 					"name": "update a country",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/444574734.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/countries/444574734.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -825,7 +861,7 @@
 				{
 					"name": "delete a country",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/444574734.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/countries/444574734.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -851,7 +887,7 @@
 				{
 					"name": "Get a list of all custom collections ",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/custom_collections.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/custom_collections.json",
 						"method": "GET",
 						"header": [
 							{
@@ -871,7 +907,7 @@
 				{
 					"name": "Get a count of all custom collections ",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/custom_collections/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/custom_collections/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -891,7 +927,7 @@
 				{
 					"name": "Get a single custom collections ",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/custom_collections/246409795.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/custom_collections/246409795.json",
 						"method": "GET",
 						"header": [
 							{
@@ -911,7 +947,7 @@
 				{
 					"name": "Create a new custom collection",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/custom_collections.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/custom_collections.json",
 						"method": "POST",
 						"header": [
 							{
@@ -931,7 +967,7 @@
 				{
 					"name": "update a custom collection",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/custom_collections/246409795.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/custom_collections/246409795.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -951,7 +987,7 @@
 				{
 					"name": "delete a custom collection",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/custom_collections/246409795.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/custom_collections/246409795.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -977,7 +1013,7 @@
 				{
 					"name": "Retrieve all customers",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers.json",
 						"method": "GET",
 						"header": [
 							{
@@ -997,7 +1033,7 @@
 				{
 					"name": "Get all customers with an address in the Brazil",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/search.json?query=country:Brazil",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers/search.json?query=country:Brazil",
 						"method": "GET",
 						"header": [
 							{
@@ -1017,7 +1053,7 @@
 				{
 					"name": "Get a single customer by ID",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers/3989659651.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1037,7 +1073,7 @@
 				{
 					"name": "Create a new customer record",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers.json",
 						"method": "POST",
 						"header": [
 							{
@@ -1057,7 +1093,7 @@
 				{
 					"name": "Add metafield to an existing customer",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/5438892686.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers/5438892686.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -1077,7 +1113,7 @@
 				{
 					"name": "Remove an existing customer",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/5438892686.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers/5438892686.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -1097,7 +1133,7 @@
 				{
 					"name": "Get a count of all customers",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1117,7 +1153,7 @@
 				{
 					"name": "Get all orders from a customer",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders.json?customer_id=5380614542",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders.json?customer_id=5380614542",
 						"method": "GET",
 						"header": [
 							{
@@ -1143,7 +1179,7 @@
 				{
 					"name": "Get all of a customer's addresses",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers/3989659651/addresses.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1163,7 +1199,7 @@
 				{
 					"name": "Get a single customers address",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses/5436816654.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers/3989659651/addresses/5436816654.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1183,7 +1219,7 @@
 				{
 					"name": "Creating a new address for a customer",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers/3989659651/addresses.json",
 						"method": "POST",
 						"header": [
 							{
@@ -1203,7 +1239,7 @@
 				{
 					"name": "Updating a customers postal code",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses/5484465742.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers/3989659651/addresses/5484465742.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -1223,7 +1259,7 @@
 				{
 					"name": "Removing a customers address",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses/5484465742.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers/3989659651/addresses/5484465742.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -1243,7 +1279,7 @@
 				{
 					"name": "destroying multiple customer addresses",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses/set.json?address_ids[]=5441388622&operation=destroy",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers/3989659651/addresses/set.json?address_ids[]=5441388622&operation=destroy",
 						"method": "PUT",
 						"header": [
 							{
@@ -1263,7 +1299,7 @@
 				{
 					"name": "assigning a new default address to a customer",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customers/3989659651/addresses/5436816654/default.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customers/3989659651/addresses/5436816654/default.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -1289,7 +1325,7 @@
 				{
 					"name": " Get all customer saved searches for a shop",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customer_saved_searches.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1309,7 +1345,7 @@
 				{
 					"name": "Get a count of all customer saved searches",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customer_saved_searches/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1329,7 +1365,7 @@
 				{
 					"name": "Get one customer saved search by ID",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches/1189248515.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customer_saved_searches/1189248515.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1349,7 +1385,7 @@
 				{
 					"name": "Get all customers who match the criteria",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches/1189248515/customers.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customer_saved_searches/1189248515/customers.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1369,7 +1405,7 @@
 				{
 					"name": "Create a new Customer Saved Search",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customer_saved_searches.json",
 						"method": "POST",
 						"header": [
 							{
@@ -1389,7 +1425,7 @@
 				{
 					"name": "Update an existing Customer Saved Search",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches/2029905294.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customer_saved_searches/2029905294.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -1409,7 +1445,7 @@
 				{
 					"name": "Delete an existing Customer Saved Search",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/customer_saved_searches/2029905294.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/customer_saved_searches/2029905294.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -1435,7 +1471,7 @@
 				{
 					"name": " Create a discount",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/discounts.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/discounts.json",
 						"method": "POST",
 						"header": [
 							{
@@ -1455,7 +1491,7 @@
 				{
 					"name": "List all discounts",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/discounts.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/discounts.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1475,7 +1511,7 @@
 				{
 					"name": "Retrieve a discount",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/discounts/2951196163.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/discounts/2951196163.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1495,7 +1531,7 @@
 				{
 					"name": " Disable a discount",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/discounts/2951196163/disable.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/discounts/2951196163/disable.json",
 						"method": "POST",
 						"header": [
 							{
@@ -1515,7 +1551,7 @@
 				{
 					"name": "Enable a discount",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/discounts/2951196163/enable.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/discounts/2951196163/enable.json",
 						"method": "POST",
 						"header": [
 							{
@@ -1535,7 +1571,7 @@
 				{
 					"name": "Delete a discount",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/discounts/2951196163.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/discounts/2951196163.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -1561,7 +1597,7 @@
 				{
 					"name": "Get all the events from a particular product",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/events.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/events.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1581,7 +1617,7 @@
 				{
 					"name": "Get all the events from a particular order",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/events.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/events.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1601,7 +1637,7 @@
 				{
 					"name": "Shows the same fields as the list action.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/events/58706658318.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/events/58706658318.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1621,7 +1657,7 @@
 				{
 					"name": "Count all the events",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/events/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/events/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1647,7 +1683,7 @@
 				{
 					"name": "Count all the total number of fulfillments for an order.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4528049998/fulfillments/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1667,7 +1703,7 @@
 				{
 					"name": "Get a list of all fulfillments for an order.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4495703502/fulfillments.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4495703502/fulfillments.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1687,7 +1723,7 @@
 				{
 					"name": "Get the Representation of a specific fulfillment.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4528049998/fulfillments/3770145678.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1707,7 +1743,7 @@
 				{
 					"name": "Update tracking number for a fulfillment.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4528049998/fulfillments/3770145678.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -1727,7 +1763,7 @@
 				{
 					"name": "Complete a fulfillment.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/complete.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/complete.json",
 						"method": "POST",
 						"header": [
 							{
@@ -1747,7 +1783,7 @@
 				{
 					"name": "Transition a fulfillment from pending to open.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/open.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/open.json",
 						"method": "POST",
 						"header": [
 							{
@@ -1767,7 +1803,7 @@
 				{
 					"name": "Cancel a fulfillment.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/cancel.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/cancel.json",
 						"method": "POST",
 						"header": [
 							{
@@ -1793,7 +1829,7 @@
 				{
 					"name": "Get a list of all fulfillment events for a fulfillment",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/events.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/events.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1813,7 +1849,7 @@
 				{
 					"name": "Fetch a fulfillment event.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/events/#{event_id}.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4528049998/fulfillments/3770145678/events/#{event_id}.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1833,7 +1869,7 @@
 				{
 					"name": "Create a fulfillment event.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4495703502/fulfillments/3763917198/events.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4495703502/fulfillments/3763917198/events.json",
 						"method": "POST",
 						"header": [
 							{
@@ -1853,7 +1889,7 @@
 				{
 					"name": "Delete a fulfillment event.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4495703502/fulfillments/3763917198/events/9519874062.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4495703502/fulfillments/3763917198/events/9519874062.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -1879,7 +1915,7 @@
 				{
 					"name": "List your app's fulfillment services",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/fulfillment_services.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/fulfillment_services.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1899,7 +1935,7 @@
 				{
 					"name": " Create a fulfillment service",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/fulfillment_services.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/fulfillment_services.json",
 						"method": "POST",
 						"header": [
 							{
@@ -1919,7 +1955,7 @@
 				{
 					"name": "Get a single fulfillment service by its ID",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/fulfillment_services/1357646.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/fulfillment_services/1357646.json",
 						"method": "GET",
 						"header": [
 							{
@@ -1939,7 +1975,7 @@
 				{
 					"name": "Update a fulfillment service",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/fulfillment_services/1357646.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/fulfillment_services/1357646.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -1959,7 +1995,7 @@
 				{
 					"name": " Destroy a fulfillment service",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/fulfillment_services/1357646.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/fulfillment_services/1357646.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -1985,7 +2021,7 @@
 				{
 					"name": "Get a list of all gift cards",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/gift_cards.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2005,7 +2041,7 @@
 				{
 					"name": "Get a list of all enabled gift cards",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards.json?status=enabled",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/gift_cards.json?status=enabled",
 						"method": "GET",
 						"header": [
 							{
@@ -2025,7 +2061,7 @@
 				{
 					"name": "Show a specific gift card's details",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards/61466894.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/gift_cards/61466894.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2045,7 +2081,7 @@
 				{
 					"name": "Retrieve a count of all gift cards",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/gift_cards/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2065,7 +2101,7 @@
 				{
 					"name": "Create a new gift card with an automatically generated code",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/gift_cards.json",
 						"method": "POST",
 						"header": [
 							{
@@ -2085,7 +2121,7 @@
 				{
 					"name": "Update the expiry date of a gift card",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards/61810574.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/gift_cards/61810574.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -2105,7 +2141,7 @@
 				{
 					"name": "Disable a gift card",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards/61810574/disable.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/gift_cards/61810574/disable.json",
 						"method": "POST",
 						"header": [
 							{
@@ -2125,7 +2161,7 @@
 				{
 					"name": "Get all gift cards that matches the query",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/gift_cards/search.json?query=61",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/gift_cards/search.json?query=61",
 						"method": "GET",
 						"header": [
 							{
@@ -2151,7 +2187,7 @@
 				{
 					"name": "Get a list of all locations for a shop",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/locations.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/locations.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2171,7 +2207,7 @@
 				{
 					"name": "Get a single location",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/locations/8790723.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/locations/8790723.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2197,7 +2233,7 @@
 				{
 					"name": "Get all metafields that belong to a store",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/metafields.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/metafields.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2217,7 +2253,7 @@
 				{
 					"name": "Get all metafields that belong to a product",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/metafields.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/metafields.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2237,7 +2273,7 @@
 				{
 					"name": "Get a count of all metafields for a store",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/metafields/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/metafields/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2257,7 +2293,7 @@
 				{
 					"name": "Get a count of all metafields that belong to a product",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/metafields/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/metafields/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2277,7 +2313,7 @@
 				{
 					"name": "Get a single store metafield by ID",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/metafields/33145232974.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/metafields/33145232974.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2297,7 +2333,7 @@
 				{
 					"name": "Get a single product metafield using the metafield's nested resource path",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/metafields/33058305934.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/metafields/33058305934.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2317,7 +2353,7 @@
 				{
 					"name": "Create a new metafield for a store.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/metafields.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/metafields.json",
 						"method": "POST",
 						"header": [
 							{
@@ -2337,7 +2373,7 @@
 				{
 					"name": "Create a new metafield for a product.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/metafields.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/metafields.json",
 						"method": "POST",
 						"header": [
 							{
@@ -2357,7 +2393,7 @@
 				{
 					"name": "Update an existing store metafield. ",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/metafields/33145232974.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/metafields/33145232974.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -2377,7 +2413,7 @@
 				{
 					"name": "Update an existing metafield belonging to a product ",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/metafields/33058305934.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/metafields/33058305934.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -2397,7 +2433,7 @@
 				{
 					"name": "Delete a store metafield",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/metafields/33145232974.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/metafields/33145232974.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -2417,7 +2453,7 @@
 				{
 					"name": "Delete a product metafield",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/metafields/33058305934.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/metafields/33058305934.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -2443,7 +2479,7 @@
 				{
 					"name": "List all orders",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2463,7 +2499,7 @@
 				{
 					"name": "Get a representation of a single order",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2483,7 +2519,7 @@
 				{
 					"name": "Count all orders",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2503,7 +2539,7 @@
 				{
 					"name": "Close a processed order",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/close.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/close.json",
 						"method": "POST",
 						"header": [
 							{
@@ -2523,7 +2559,7 @@
 				{
 					"name": "Re-opening a closed Order",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/open.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/open.json",
 						"method": "POST",
 						"header": [
 							{
@@ -2543,7 +2579,7 @@
 				{
 					"name": "Canceling an Order",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/cancel.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/cancel.json",
 						"method": "POST",
 						"header": [
 							{
@@ -2563,7 +2599,7 @@
 				{
 					"name": "Canceling and refunding an Order",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/cancel.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/cancel.json",
 						"method": "POST",
 						"header": [
 							{
@@ -2583,7 +2619,7 @@
 				{
 					"name": "Create a pending order with an existing customer",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders.json",
 						"method": "POST",
 						"header": [
 							{
@@ -2603,7 +2639,7 @@
 				{
 					"name": "Update an order",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -2623,7 +2659,7 @@
 				{
 					"name": "Delete an order.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -2649,7 +2685,7 @@
 				{
 					"name": "Add a fraud risk for Proxy detection",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4602125518/risks.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4602125518/risks.json",
 						"method": "POST",
 						"header": [
 							{
@@ -2669,7 +2705,7 @@
 				{
 					"name": "Get all Order Risks for an Order",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4602125518/risks.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4602125518/risks.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2689,7 +2725,7 @@
 				{
 					"name": "Get a single Order Risk",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4602125518/risks/8609858574.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4602125518/risks/8609858574.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2709,7 +2745,7 @@
 				{
 					"name": "Update an existing risk detail line on an order",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4602125518/risks/8609858574.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4602125518/risks/8609858574.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -2729,7 +2765,7 @@
 				{
 					"name": "Delete an erroneous risk entry",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4602125518/risks/8609858574.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4602125518/risks/8609858574.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -2755,7 +2791,7 @@
 				{
 					"name": "Get a list of all pages",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/pages.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/pages.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2775,7 +2811,7 @@
 				{
 					"name": "Count all pages for a shop",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/pages/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/pages/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2795,7 +2831,7 @@
 				{
 					"name": "Get a single page by its ID",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/pages/169722563.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/pages/169722563.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2815,7 +2851,7 @@
 				{
 					"name": " Create a new page",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/pages.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/pages.json",
 						"method": "POST",
 						"header": [
 							{
@@ -2835,7 +2871,7 @@
 				{
 					"name": "update a page",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/pages/216307854.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/pages/216307854.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -2855,7 +2891,7 @@
 				{
 					"name": "Delete a page",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/pages/216307854.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/pages/216307854.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -2881,7 +2917,7 @@
 				{
 					"name": "getting the shops policies",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/policies.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/policies.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2907,7 +2943,7 @@
 				{
 					"name": " Get all products",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2927,7 +2963,7 @@
 				{
 					"name": "Count all products",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2947,7 +2983,7 @@
 				{
 					"name": "Get a single product",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555.json",
 						"method": "GET",
 						"header": [
 							{
@@ -2967,7 +3003,7 @@
 				{
 					"name": "Create a new product with multiple product variants",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products.json",
 						"method": "POST",
 						"header": [
 							{
@@ -2987,7 +3023,7 @@
 				{
 					"name": "Update a product and one of its variants",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/9579007950.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/9579007950.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -3007,7 +3043,7 @@
 				{
 					"name": "Remove a product from the shop",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/9579007950.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/9579007950.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -3033,7 +3069,7 @@
 				{
 					"name": "Get all product images",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/images.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/images.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3053,7 +3089,7 @@
 				{
 					"name": "Get a count of all product images",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/images/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/images/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3073,7 +3109,7 @@
 				{
 					"name": "Get a single product image by id",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/images/19489404942.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/images/19489404942.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3093,7 +3129,7 @@
 				{
 					"name": "Create a new product image",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/images.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/images.json",
 						"method": "POST",
 						"header": [
 							{
@@ -3113,7 +3149,7 @@
 				{
 					"name": " Modify an existing product image",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/images/19489404942.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/images/19489404942.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -3133,7 +3169,7 @@
 				{
 					"name": "Delete a product image",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/images/19489404942.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/images/19489404942.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -3159,7 +3195,7 @@
 				{
 					"name": "Get all variants for a product",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/variants.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/variants.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3179,7 +3215,7 @@
 				{
 					"name": "Get a count of variants for a product",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/variants/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/variants/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3199,7 +3235,7 @@
 				{
 					"name": "Get a product variant by id",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin//variants/25831837123.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin//variants/25831837123.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3219,7 +3255,7 @@
 				{
 					"name": "Create a new product variant",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/variants.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/variants.json",
 						"method": "POST",
 						"header": [
 							{
@@ -3239,7 +3275,7 @@
 				{
 					"name": "Update an existing product variant",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/variants/34705478094.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/variants/34705478094.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -3259,7 +3295,7 @@
 				{
 					"name": "Delete a product variant",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/products/7990943555/variants/34705478094.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/products/7990943555/variants/34705478094.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -3285,7 +3321,7 @@
 				{
 					"name": "Get a count of all provinces",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/261414723/provinces/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/countries/261414723/provinces/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3305,7 +3341,7 @@
 				{
 					"name": "Get all provinces",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/261414723/provinces.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/countries/261414723/provinces.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3325,7 +3361,7 @@
 				{
 					"name": "get a single province",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/261414723/provinces/4003640003.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/countries/261414723/provinces/4003640003.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3345,7 +3381,7 @@
 				{
 					"name": "Update a province's tax rate",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/countries/261414723/provinces/4003640003.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/countries/261414723/provinces/4003640003.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -3371,7 +3407,7 @@
 				{
 					"name": "Create a new charge",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/recurring_application_charges.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/recurring_application_charges.json",
 						"method": "POST",
 						"header": [
 							{
@@ -3397,7 +3433,7 @@
 				{
 					"name": "Get a list of all URL redirect",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/redirects.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/redirects.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3417,7 +3453,7 @@
 				{
 					"name": "Get a countt of all URL redirect",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/redirects/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/redirects/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3437,7 +3473,7 @@
 				{
 					"name": "Get a single URL redirect",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/redirects/count/7376372.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/redirects/count/7376372.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3457,7 +3493,7 @@
 				{
 					"name": "Create a new redirect.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/redirects.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/redirects.json",
 						"method": "POST",
 						"header": [
 							{
@@ -3477,7 +3513,7 @@
 				{
 					"name": "Update a redirect",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/redirects/293743566.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/redirects/293743566.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -3497,7 +3533,7 @@
 				{
 					"name": "delete a redirect",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/redirects/293743566.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/redirects/293743566.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -3523,7 +3559,7 @@
 				{
 					"name": "Get all refunds from a specific order",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/refunds.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/refunds.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3543,7 +3579,7 @@
 				{
 					"name": "Get a representation of a single refund",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/refunds/646546.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/refunds/646546.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3563,7 +3599,7 @@
 				{
 					"name": "Calculate a refund for a line item and shipping",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/refunds/calculate.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/refunds/calculate.json",
 						"method": "POST",
 						"header": [
 							{
@@ -3583,7 +3619,7 @@
 				{
 					"name": "Create a new refund for an order",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/refunds.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/refunds.json",
 						"method": "POST",
 						"header": [
 							{
@@ -3609,7 +3645,7 @@
 				{
 					"name": "Get a list of all script tags ",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/script_tags.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/script_tags.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3629,7 +3665,7 @@
 				{
 					"name": "Get a count of all script tags ",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/script_tags/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/script_tags/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3649,7 +3685,7 @@
 				{
 					"name": "Get a single  script tag",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/script_tags/373484.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/script_tags/373484.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3669,7 +3705,7 @@
 				{
 					"name": "create a new script tag",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/script_tags.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/script_tags.json",
 						"method": "POST",
 						"header": [
 							{
@@ -3689,7 +3725,7 @@
 				{
 					"name": "update a script tag",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/script_tags/108074126.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/script_tags/108074126.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -3709,7 +3745,7 @@
 				{
 					"name": "remove a script tag",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/script_tags/108074126.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/script_tags/108074126.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -3735,7 +3771,7 @@
 				{
 					"name": "Show list of shipping zones",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/shipping_zones.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/shipping_zones.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3761,7 +3797,7 @@
 				{
 					"name": "Get the configuration of the shop account",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/shop.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/shop.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3787,7 +3823,7 @@
 				{
 					"name": "Get all collection",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/smart_collections.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/smart_collections.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3807,7 +3843,7 @@
 				{
 					"name": "Get a count of all collections",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/smart_collections/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/smart_collections/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3827,7 +3863,7 @@
 				{
 					"name": "Get a single collection",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/smart_collections/401912846.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/smart_collections/401912846.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3847,7 +3883,7 @@
 				{
 					"name": "Create a new collection",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/smart_collections.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/smart_collections.json",
 						"method": "POST",
 						"header": [
 							{
@@ -3867,7 +3903,7 @@
 				{
 					"name": "Update a single collection",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/smart_collections/401912846.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/smart_collections/401912846.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -3887,7 +3923,7 @@
 				{
 					"name": "Delete a single collection",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/smart_collections/408154574.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/smart_collections/408154574.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -3913,7 +3949,7 @@
 				{
 					"name": "Get all shop themes",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/themes.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3933,7 +3969,7 @@
 				{
 					"name": "Get a single theme",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes/110163843.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/themes/110163843.json",
 						"method": "GET",
 						"header": [
 							{
@@ -3953,7 +3989,7 @@
 				{
 					"name": "Create a new theme",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/themes.json",
 						"method": "POST",
 						"header": [
 							{
@@ -3973,7 +4009,7 @@
 				{
 					"name": "Update a theme's attributes",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes/164593742.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/themes/164593742.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -3993,7 +4029,7 @@
 				{
 					"name": "Delete a theme",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/themes/164593742.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/themes/164593742.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -4019,7 +4055,7 @@
 				{
 					"name": "Get all transactions for an order",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/transactions.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/transactions.json",
 						"method": "GET",
 						"header": [
 							{
@@ -4039,7 +4075,7 @@
 				{
 					"name": "Get a count of transactions for an order",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/transactions/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/transactions/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -4059,7 +4095,7 @@
 				{
 					"name": "Get a specific transaction",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/transactions/5016037966.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/transactions/5016037966.json",
 						"method": "GET",
 						"header": [
 							{
@@ -4079,7 +4115,7 @@
 				{
 					"name": "Capture a previously authorized order for the full amount",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/orders/4554953422/transactions.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/orders/4554953422/transactions.json",
 						"method": "POST",
 						"header": [
 							{
@@ -4115,7 +4151,7 @@
 				{
 					"name": "Get a list of all webhooks for your shop.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/webhooks.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/webhooks.json",
 						"method": "GET",
 						"header": [
 							{
@@ -4135,7 +4171,7 @@
 				{
 					"name": "Get a count of all webhooks for your shop.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/webhooks/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/webhooks/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -4155,7 +4191,7 @@
 				{
 					"name": "Get a single webhook by its id.",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/webhooks/93838927.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/webhooks/93838927.json",
 						"method": "GET",
 						"header": [
 							{
@@ -4175,7 +4211,7 @@
 				{
 					"name": "Create a webhook",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/webhooks.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/webhooks.json",
 						"method": "POST",
 						"header": [
 							{
@@ -4195,7 +4231,7 @@
 				{
 					"name": "Update a Webhook",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/webhooks/503738446.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/webhooks/503738446.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -4215,7 +4251,7 @@
 				{
 					"name": "Delete a Webhook",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/webhooks/503738446.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/webhooks/503738446.json",
 						"method": "DELETE",
 						"header": [
 							{
@@ -4241,7 +4277,7 @@
 				{
 					"name": "Get a list of all comments ",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/comments.json",
 						"method": "GET",
 						"header": [
 							{
@@ -4261,7 +4297,7 @@
 				{
 					"name": "Get a count of all comments ",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/count.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/comments/count.json",
 						"method": "GET",
 						"header": [
 							{
@@ -4281,7 +4317,7 @@
 				{
 					"name": "Get a count of all the comments for all the articles of a certain blog",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/count.json?blog_id=62581763",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/comments/count.json?blog_id=62581763",
 						"method": "GET",
 						"header": [
 							{
@@ -4301,7 +4337,7 @@
 				{
 					"name": "Get a single comment",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/#{id}.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/comments/#{id}.json",
 						"method": "GET",
 						"header": [
 							{
@@ -4321,7 +4357,7 @@
 				{
 					"name": "Create a new comment for an article",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com//admin/comments.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com//admin/comments.json",
 						"method": "POST",
 						"header": [
 							{
@@ -4341,7 +4377,7 @@
 				{
 					"name": "Update a comment ",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/2941387470.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/comments/2941387470.json",
 						"method": "PUT",
 						"header": [
 							{
@@ -4361,7 +4397,7 @@
 				{
 					"name": "Mark a comment as Spam",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/2941387470/spam.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/comments/2941387470/spam.json",
 						"method": "POST",
 						"header": [
 							{
@@ -4381,7 +4417,7 @@
 				{
 					"name": "Mark a comment as not spam",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/2941387470/not_spam.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/comments/2941387470/not_spam.json",
 						"method": "POST",
 						"header": [
 							{
@@ -4401,7 +4437,7 @@
 				{
 					"name": "Approve a comment",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/2941387470/approve.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/comments/2941387470/approve.json",
 						"method": "POST",
 						"header": [
 							{
@@ -4421,7 +4457,7 @@
 				{
 					"name": "Remove a comment",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/2941387470/remove.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/comments/2941387470/remove.json",
 						"method": "POST",
 						"header": [
 							{
@@ -4441,7 +4477,7 @@
 				{
 					"name": "restore a comment",
 					"request": {
-						"url": "https://apikey:password@yourstore.myshopify.com/admin/comments/2941387470/restore.json",
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/comments/2941387470/restore.json",
 						"method": "POST",
 						"header": [
 							{
@@ -4463,7 +4499,7 @@
 		{
 			"name": "Hack Authentication",
 			"request": {
-				"url": "https://apikey:password@yourstore.myshopify.com/account/login",
+				"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/account/login",
 				"method": "POST",
 				"header": [
 					{
@@ -4482,7 +4518,7 @@
 							"enabled": true
 						},
 						{
-							"key": "customer[password]",
+							"key": "customer[{{password}}]",
 							"value": "101010",
 							"type": "text",
 							"enabled": true
