@@ -6,12 +6,15 @@ Unfortunately, our Account Manager said that there is no Postman Collection avai
 # How to use?
 
 The Postman Collection file is a JSON containing all information about each request.
-In order to configure the Collection to your own needs, i suggest you download the ".postman_collection" file, and "find and replace" a few things with your favorite text editor.
+This Collection is using Postman Environment Variables, so all you have to do is create an Environment at your Postman and register the Postman variables, which are:
 
-- apikey:password
-- yourstore.myshopify.com
+- apikey
+- password
+- yourstore
 
-Once you replace this data with private credentials of your store, you will be able to use the whole Collection.
+To learn more about Postman variables: https://www.getpostman.com/docs/environments
+
+Once you register the required variables for your store, you will be able to use the whole Collection.
 
 # How to know what is my API Credentials?
 
@@ -23,6 +26,7 @@ https://help.shopify.com/api/guides/api-credentials
 - Checkout
 - User
 - UsageCharge
+- Draft Order
 
 # Collaboration
 
