@@ -26,7 +26,6 @@ https://help.shopify.com/api/guides/api-credentials
 - Checkout
 - User
 - UsageCharge
-- Draft Order
 
 # Collaboration
 
