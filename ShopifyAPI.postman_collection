@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "ShopifyAPI (generic)",
-		"_postman_id": "3edfacae-17fe-01b2-02e3-a442d54144aa",
+		"_postman_id": "58c7e278-645f-4e9e-f540-9fa45f943617",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -1585,6 +1585,183 @@
 							"raw": "{\n  \"discount\": {\n    \"discount_type\": \"fixed_amount\",\n    \"value\": \"10.00\",\n    \"code\": \"fortunamajor\",\n    \"minimum_order_amount\": \"40.00\"\n  }\n}"
 						},
 						"description": "https://help.shopify.com/api/reference/discount#destroy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Draft Order",
+			"description": "",
+			"item": [
+				{
+					"name": "Create a Draft Order that loads shipping and billing addresses automatically from the customer’s default address",
+					"request": {
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/draft_orders.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"draft_order\": {\n                  \"line_items\": [{\n                    \"title\": \"Custom Tee\",\n                    \"price\": \"20.00\",\n                    \"quantity\": 2\n                  }],\n                \"customer\": {\n                  \"id\": 4312658502\n                },\n                \"use_customer_default_address\": true\n                }\n}"
+						},
+						"description": "Creates a Draft Order that loads shipping and billing addresses automatically from the customer’s default address"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Draft Order using a product variant line item",
+					"request": {
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/draft_orders.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"draft_order\": {\n                    \"line_items\": [{\n                      \"variant_id\": \"26669237382\",\n                      \"quantity\": 2\n                    }],\n                  \"customer\": {\n                    \"id\": 4312658502\n                  },\n                  \"use_customer_default_address\": true\n                  }\n}\n"
+						},
+						"description": "Creates a Draft Order using an existing product variant line item"
+					},
+					"response": []
+				},
+				{
+					"name": "Create an extensive Draft Order",
+					"request": {
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/draft_orders.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"draft_order\": {\n              \"email\": \"paul.norman@example.com\",\n              \"customer\": {\n                \"id\": \"123456789\"\n              },\n              \"billing_address\": {\n                \"first_name\": \"John\",\n                \"last_name\": \"Smith\",\n                \"address1\": \"123 Fake Street\",\n                \"phone\": \"555-555-5555\",\n                \"city\": \"Fakecity\",\n                \"province\": \"Ontario\",\n                \"country\": \"Canada\",\n                \"zip\": \"K2P 1L4\"\n              },\n              \"shipping_address\": {\n                \"first_name\": \"Jane\",\n                \"last_name\": \"Smith\",\n                \"address1\": \"123 Fake Street\",\n                \"phone\": \"777-777-7777\",\n                \"city\": \"Fakecity\",\n                \"province\": \"Ontario\",\n                \"country\": \"Canada\",\n                \"zip\": \"K2P 1L4\"\n              },\n              \"note\": \"include a gift card\",\n              \"tags\": \"Wholesale, Inbound\",\n              \"metafields\": [{\n                \"key\": \"new\",\n                \"value\": \"newvalue\",\n                \"value_type\": \"string\",\n                \"namespace\": \"global\"\n              }],\n              \"tax_exempt\": \"false\",\n              \"line_items\": [{\n                \"title\": \"Custom Tee\",\n                \"price\": \"20.00\",\n                \"quantity\": 2,\n                \"applied_discount\": {\n                  \"title\": \"damage\",\n                  \"description\": \"$5 off discount for damaged goods\",\n                  \"value\": \"5.00\",\n                  \"value_type\": \"fixed_amount\",\n                  \"amount\": \"10.00\"\n                }\n              }],\n              \"applied_discount\": {\n                \"title\": \"customer loyalty\",\n                \"description\": \"10% off entire order as part of our customer loyalty program\",\n                \"value\": \"10.00\",\n                \"value_type\": \"percentage\",\n                \"amount\": \"3.00\"\n              },\n              \"shipping_line\": {\n                \"title\": \"Flat rate\",\n                \"price\": \"12\"\n              }\n     }\n }"
+						},
+						"description": "Creates an extensive Draft Order object "
+					},
+					"response": []
+				},
+				{
+					"name": "Create a simple Draft Order",
+					"request": {
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/draft_orders.json",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"draft_order\": {\n    \"line_items\": [{\n      \"title\": \"Custom Tee\",\n      \"price\": \"20.00\",\n      \"quantity\":2\n    }]\n  }\n}"
+						},
+						"description": "Creates a basic Draft Order object "
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve a list of Draft Orders",
+					"request": {
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/draft_orders.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Returns a list of Draft Order objects"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve a count of all Draft Orders",
+					"request": {
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/draft_orders/count.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Returns a count of all Draft Orders"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve a single Draft Order",
+					"request": {
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/draft_orders/{{draftorder_id}}.json",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Returns a specific Draft Order object by ID "
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an existing Draft Order",
+					"request": {
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/draft_orders/{{draftorder_id}}.json",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": "Permanently deletes an existing Draft Order object"
+					},
+					"response": []
+				},
+				{
+					"name": "Remove a customer from an existing Draft Order",
+					"request": {
+						"url": "https://{{apikey}}:{{password}}@{{yourstore}}.myshopify.com/admin/draft_orders/{{draftorder_id}}.json",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"draft_order\": {\n        \"id\": 1234,\n         \"customer\": null\n        }\n}"
+						},
+						"description": "Removes a customer from an existing Draft Order"
 					},
 					"response": []
 				}
