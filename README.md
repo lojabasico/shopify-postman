@@ -11,7 +11,7 @@ This Collection is using Postman Environment Variables, so all you have to do is
 - apikey
 - password
 - yourstore
-
+- token
 To learn more about Postman variables: https://www.getpostman.com/docs/environments
 
 Once you register the required variables for your store, you will be able to use the whole Collection.
@@ -29,7 +29,7 @@ https://help.shopify.com/api/guides/api-credentials
 - Draft Order
 
 # Collaboration
-
+Feli (@Feli87)
 Feel free to contribute if you believe there is something missing.
 
 # Authors
