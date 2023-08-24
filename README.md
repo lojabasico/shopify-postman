@@ -30,7 +30,6 @@ https://help.shopify.com/api/guides/api-credentials
 
 # Collaboration
 
-Feli (@Feli87)
 Feel free to contribute if you believe there is something missing.
 
 # Authors
